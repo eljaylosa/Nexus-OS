@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS OS - Presentation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
+</head>
+<body>
+  <!-- Boot / Hero Section -->
+  <section id="boot" class="active section">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1 class="title">NEXUS OS</h1>
+      <p class="quote">“Futuristic Gaming Operating System”</p>
+      <p class="author">By Eljay Losa</p>
+      <button id="startBtn" class="btn">Start OS</button>
+    </div>
+    <audio id="bootSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+    <audio id="bootSound2" src="audio/Valorant_ Match Found Female Voiceline - Gaming Sound Effect (HD).mp3"></audio>
+  </section>
+
+  <!-- Home Section -->
+  <section id="home" class="section hidden">
+    <h2>Welcome to My Presentation</h2>
+    <p>Presenting <strong>NEXUS OS</strong> – A Futuristic Gaming Operating System</p>
+  </section>
+
+  <!-- Inspiration Section -->
+  <section id="inspiration" class="section hidden">
+    <h2>Inspiration</h2>
+    <p>The idea for NEXUS OS came from my love for futuristic tech and gaming systems like Valorant. I wanted to blend sleek design with performance and creativity.</p>
+  </section>
+
+  <!-- OS Name + Meaning -->
+  <section id="meaning" class="section hidden">
+    <h2>OS Name & Meaning</h2>
+    <p><strong>NEXUS</strong> symbolizes a hub that connects gamers, technology, and creativity into one cohesive ecosystem.</p>
+  </section>
+
+ <!-- Features -->
+<section id="features" class="section hidden section2">
+  <h2>Top 10 Features</h2>
+  <ol class="feature-list">
+    <li data-desc="Analyzes hardware and running processes, then auto-adjusts CPU/GPU priorities, resolution scaling, and background tasks to maximize FPS and minimize stutter.">AI Game Optimizer</li>
+    <li data-desc="A holographic-style dashboard with floating widgets (performance, chat, quick-launch) that players can position and customize in real time.">HoloHUD Interface</li>
+    <li data-desc="Unified game launcher and manager that lists installed games, patches, mods, and quick-join multiplayer sessions. Includes one-click compatibility fixes.">GameZone Portal</li>
+    <li data-desc="Real-time theme engine with RGB and cyberpunk palettes, dynamic wallpapers, and adaptive colors that respond to in-game events (health low = red flash, etc.).">Spectra Theme Engine</li>
+    <li data-desc="Hands-free voice control for launching games, toggling modes, sending quick chat messages, or executing performance profiles.">Voice Command Center</li>
+    <li data-desc="Intelligent power management that switches between Performance, Balanced, and Silent modes based on game type and battery/thermal status.">EnergyCore Mode</li>
+    <li data-desc="Built-in integrations for Discord, Steam, Twitch, and friends lists — shows invites, voice channels, and stream status directly in the OS.">Social Sync</li>
+    <li data-desc="Low-latency VR/AR support with preconfigured profiles and resource reservation to reduce motion sickness and maintain smooth frame rates.">VR & AR Optimizer</li>
+    <li data-desc="Encrypted cloud backup for game saves, settings, and custom profiles — automatic versioning so you can roll back to earlier configs.">Cloud Save Vault</li>
+    <li data-desc="Context-aware assistant that gives live performance tips, recommends settings per game, and can overlay quick tactical hints.">Nexus AI Assistant</li>
+  </ol>
+</section>
+
+<!-- Feature Modal -->
+<div id="featureModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h3 id="featureTitle"></h3>
+    <p id="featureDesc"></p>
+  </div>
+</div>
+
+  <!-- Conclusion -->
+  <section id="conclusion" class="section hidden">
+    <h2>Conclusion</h2>
+    <p>Thank you for exploring NEXUS OS. I hope this concept inspires futuristic innovation in gaming and design.</p>
+  </section>
+
+  <!-- Navbar -->
+  <nav class="navbar hidden">
+    <ul>
+      <li><a href="#boot" class="nav-link" data-target="boot">Home</a></li>
+      <li><a href="#inspiration" class="nav-link" data-target="inspiration">Inspiration</a></li>
+      <li><a href="#meaning" class="nav-link" data-target="meaning">Name + Meaning</a></li>
+      <li><a href="#features" class="nav-link" data-target="features">Features</a></li>
+      <li><a href="#conclusion" class="nav-link" data-target="conclusion">Conclusion</a></li>
+    </ul>
+  </nav>
+
+  <audio id="clickSound" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
