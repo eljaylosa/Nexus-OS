@@ -221,63 +221,71 @@ body {
   to { opacity: 1; transform: scale(1); }
 }
 
+/* MOBILE NAVBAR */
 @media (max-width: 768px) {
-  .title {
-    font-size: 2.5rem;
+  .navbar {
+    display: none; /* hide desktop navbar */
   }
 
-  .quote {
-    font-size: 1rem;
-    padding: 0 1rem;
+  .mobile-navbar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
   }
 
-  .author {
-    font-size: 0.9rem;
+  .menu-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #ff4655;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff4655;
+    transition: all 0.3s ease;
   }
 
-  .btn {
-    padding: 0.6rem 1.5rem;
-    font-size: 1rem;
+  .menu-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff2339;
   }
 
-  .feature-list {
-    width: 90%;
-    font-size: 0.9rem;
-  }
-
-  .feature-list li {
-    padding: 0.4rem;
-  }
-
-  .modal-content {
-    width: 90%;
-    padding: 1.5rem;
-  }
-
-  .navbar ul {
+  .menu-links {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    bottom: 70px; /* above the button */
+    right: 0;
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 12px;
+    display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    background-color: rgba(0,0,0,0.8);
+    text-align: right;
+    transition: all 0.3s ease;
+  }
+
+  .menu-links.hidden {
+    display: none;
+  }
+
+  .menu-links li a {
+    color: #fff;
+    text-decoration: none;
     padding: 0.5rem 1rem;
-    border-radius: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
   }
 
-  .navbar {
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .section {
-    padding: 1rem;
-    height: auto; /* let content define height */
-    background-size: cover; /* keep image scaling properly */
-    background-position: center;
-    background-attachment: scroll; /* smooth scroll for mobile */
-  }
-
-  /* Optional: reduce overlay opacity on mobile */
-  .overlay {
-    background: rgba(0, 0, 0, 0.5);
+  .menu-links li a:hover,
+  .menu-links li a.active {
+    background-color: #ff4655;
+    box-shadow: 0 0 10px #ff4655;
   }
 }
+
