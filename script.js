@@ -72,7 +72,7 @@ window.addEventListener("click", e => {
 // Minimal JS to toggle menu
 const menuBtn = document.querySelector('.menu-btn');
 const menuLinks = document.querySelector('.menu-links');
-const links = document.querySelectorAll('.menu-links a');
+const links = document.querySelectorAll('.menu-links li a');
 
 menuBtn.addEventListener('click', () => {
   menuLinks.classList.toggle('show'); // toggle mobile menu
