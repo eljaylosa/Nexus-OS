@@ -68,11 +68,3 @@ window.addEventListener("click", e => {
     modal.classList.add("hidden");
   }
 });
-
-// Minimal JS to toggle menu
-const menuBtn = document.querySelector('.menu-btn');
-const menuLinks = document.querySelector('.menu-links');
-
-menuBtn.addEventListener('click', () => {
-  menuLinks.classList.toggle('hidden');
-});
