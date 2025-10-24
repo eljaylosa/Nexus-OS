@@ -85,7 +85,7 @@
   <!-- Mobile Floating Navbar -->
 <div class="mobile-navbar">
   <div class="menu-btn">&#9776;</div> <!-- hamburger icon -->
-  <ul class="menu-links hidden">
+  <ul class="menu-links">
     <li><a href="#home" data-target="boot">Home</a></li>
     <li><a href="#inspiration" data-target="inspiration">Inspiration</a></li>
     <li><a href="#meaning" data-target="meaning">Meaning</a></li>
@@ -96,33 +96,6 @@
 
   <audio id="clickSound" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
   <script src="script.js"></script>
-  <script>
-    // Minimal JS to toggle menu
-const menuBtn = document.querySelector('.menu-btn');
-const menuLinks = document.querySelector('.menu-links');
-const links = document.querySelectorAll('.menu-links a');
-const sections = document.querySelectorAll('.section');
 
-menuBtn.addEventListener('click', () => {
-  menuLinks.classList.toggle('show');
-});
-
-links.forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const targetId = link.getAttribute('href').slice(1);
-
-    // Remove active from all sections
-    sections.forEach(sec => sec.classList.remove('active'));
-
-    // Add active to target section
-    const targetSection = document.getElementById(targetId);
-    targetSection.classList.add('active');
-
-    // Close mobile menu
-    menuLinks.classList.remove('show');
-  });
-});
-  </script>
 </body>
 </html>
