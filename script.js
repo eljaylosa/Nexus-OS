@@ -72,20 +72,7 @@ window.addEventListener("click", e => {
 // Minimal JS to toggle menu
 const menuBtn = document.querySelector('.menu-btn');
 const menuLinks = document.querySelector('.menu-links');
-const links = document.querySelectorAll('.menu-links li a');
 
 menuBtn.addEventListener('click', () => {
-  menuLinks.classList.toggle('show'); // toggle mobile menu
-});
-
-// Scroll to section when a link is clicked
-links.forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault(); // prevent default jump
-    const targetId = link.getAttribute('href').slice(1); // remove #
-    const targetSection = document.getElementById(targetId);
-    targetSection.scrollIntoView({ behavior: 'smooth' }); // smooth scroll
-
-    menuLinks.classList.remove('show'); // close menu after click
-  });
+  menuLinks.classList.toggle('hidden');
 });
