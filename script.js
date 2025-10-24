@@ -73,19 +73,25 @@ window.addEventListener("click", e => {
 const menuBtn = document.querySelector('.menu-btn');
 const menuLinks = document.querySelector('.menu-links');
 const links = document.querySelectorAll('.menu-links a');
+const sections = document.querySelectorAll('.section');
 
 menuBtn.addEventListener('click', () => {
-  menuLinks.classList.toggle('show'); // toggle mobile menu
+  menuLinks.classList.toggle('show');
 });
 
-// Scroll to section when a link is clicked
 links.forEach(link => {
   link.addEventListener('click', (e) => {
-    e.preventDefault(); // prevent default jump
-    const targetId = link.getAttribute('href').slice(1); // remove #
-    const targetSection = document.getElementById(targetId);
-    targetSection.scrollIntoView({ behavior: 'smooth' }); // smooth scroll
+    e.preventDefault();
+    const targetId = link.getAttribute('href').slice(1);
 
-    menuLinks.classList.remove('show'); // close menu after click
+    // Remove active from all sections
+    sections.forEach(sec => sec.classList.remove('active'));
+
+    // Add active to target section
+    const targetSection = document.getElementById(targetId);
+    targetSection.classList.add('active');
+
+    // Close mobile menu
+    menuLinks.classList.remove('show');
   });
 });
