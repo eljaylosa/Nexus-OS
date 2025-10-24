@@ -69,29 +69,3 @@ window.addEventListener("click", e => {
   }
 });
 
-// Minimal JS to toggle menu
-const menuBtn = document.querySelector('.menu-btn');
-const menuLinks = document.querySelector('.menu-links');
-const links = document.querySelectorAll('.menu-links a');
-const sections = document.querySelectorAll('.section');
-
-menuBtn.addEventListener('click', () => {
-  menuLinks.classList.toggle('show');
-});
-
-links.forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const targetId = link.getAttribute('href').slice(1);
-
-    // Remove active from all sections
-    sections.forEach(sec => sec.classList.remove('active'));
-
-    // Add active to target section
-    const targetSection = document.getElementById(targetId);
-    targetSection.classList.add('active');
-
-    // Close mobile menu
-    menuLinks.classList.remove('show');
-  });
-});
