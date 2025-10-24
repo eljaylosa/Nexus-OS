@@ -187,7 +187,7 @@ body {
   transition: opacity 0.4s ease;
 }
 
-.modal.hidden {
+.modal .hidden {
   display: none;
 }
 
@@ -270,11 +270,12 @@ body {
     transition: all 0.3s ease;
   }
 
-  .menu-links.hidden {
+  .menu-links .hidden {
     display: none;
   }
-  
-  .menu-links.show {
+
+  .menu-links .show {
+    display: block;
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
