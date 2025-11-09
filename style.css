@@ -34,6 +34,10 @@ body {
   font-size: 2.2rem;
 }
 
+.section ol li {
+  font-size: 1.2rem;
+}
+
 
 
 .section.active {
