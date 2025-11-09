@@ -24,6 +24,11 @@ body {
   text-align: center;
   position: relative;
 }
+.section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 20px 0;
+}
 
 .section.active {
   opacity: 1;
