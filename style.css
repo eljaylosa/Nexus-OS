@@ -38,8 +38,6 @@ body {
   font-size: 1.2rem;
 }
 
-
-
 .section.active {
   opacity: 1;
 }
@@ -100,7 +98,8 @@ body {
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75); /* was 0.6 — increased darkness */
+  backdrop-filter: blur(3px); /* adds subtle blur */
 }
 
 .content {
