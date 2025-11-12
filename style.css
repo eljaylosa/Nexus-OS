@@ -8,6 +8,8 @@
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
   background-color: #0a0a0a;
   color: #fff;
   overflow: hidden;
@@ -116,9 +118,11 @@ body {
 }
 
 .title {
+  font-family: 'Valorant', sans-serif;
   font-size: 4rem;
   color: #ff4655;
   text-shadow: 0 0 20px #ff4655;
+  letter-spacing: 2px;
 }
 
 .quote {
@@ -187,6 +191,7 @@ body {
 }
 
 .feature-list li {
+  font-size: 1.1rem;
   padding: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -224,6 +229,7 @@ body {
   color: #fff;
   text-align: center;
   animation: modalIn 0.4s ease;
+  font-family: 'Poppins', sans-serif; /* readable font */
 }
 
 .close-btn {
